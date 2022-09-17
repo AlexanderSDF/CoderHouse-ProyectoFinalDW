@@ -1,0 +1,21 @@
+/* MQ para tratar las dimensiones de las img en casos específicos */
+@media screen and (max-width: 1440px) {
+   .img-fluid {
+      width: 100%;
+   }
+}
+@media screen and (max-width: 1024px) {
+   .img-fluid {
+      width: 100%;
+   }
+}
+@media screen and (max-width: 990px) {
+   .img-fluid {
+      width: 90%;
+   }
+   .footer .textoFooter {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+   }
+}

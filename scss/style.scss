@@ -1,0 +1,13 @@
+
+/* VARIABLES - MAP - MIXIN - EXTEND */
+@import "./modificadores/variables";
+/* MEDIA QUERIES */
+@import "./modificadores/mediaq";
+/* PARTIALS GENERALIDADES */
+@import "./pages/general";
+/* PARTIALS PAGINAS INDIVIDUALIDADES*/
+@import "./pages/index";
+@import "./pages/historia";
+@import "./pages/pilotos";
+@import "./pages/galeria";
+@import "./pages/somos";

@@ -1,0 +1,101 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "kanit", sans-serif;
+}
+.container-fluid {
+   padding-left: 0;
+   padding-right: 0;
+   margin-right: 10%;
+}
+/* ---------------HEADER------------------ */
+.header {
+   background-image: map-get($colores, "colorNavFooter");
+   .container-fluid {
+      margin-right: 10%;
+      /* Margin del botón hamburguesa */
+      .navbar-toggler {
+         margin-right: 5%;
+         /* Ancho y alto del botón menu hamburg */
+         .navbar-toggler-icon {
+            width: 2em;
+            height: 2em;
+         }
+      }
+      /* Separación entre los nav links */
+      .nav-item {
+         margin-left: 2%;
+         font-size: $dimNavLink;
+      }
+   }
+}
+main {
+   background-color: map-get($colores, "colorAmarillo");
+   background-image: map-get($colores, "fondoBgImgAmarillo");
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   h1 {
+      @include titulosPrincipales(3.5rem, $primario, 700, center);
+   }
+   .row {
+      margin: 1%;
+      display: flex;
+      justify-content: center;
+      .col-12,
+      .col-6 {
+         @extend %divFlexCol;
+         .img-fluid {
+            @extend %imagenesTodas;
+         }
+         h2 {
+            @include titulosPrincipales(2.3rem, $primario, 700, center);
+         }
+         h3 {
+            @include titulosPrincipales(1.7rem, $primario, 700, center);
+         }
+         h4 {
+            @include titulosPrincipales(1rem, $primario, 700, center);
+         }
+         p {
+            @extend %textoEnPaginas;
+         }
+      }
+   }
+}
+.footer {
+   background-image: map-get($colores, "colorNavFooter");
+   .textoFooter {
+      display: flex;
+      padding: 2rem;
+      justify-content: space-between;
+      .listaFooter {
+         ul {
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            li {
+               a {
+                  text-decoration: none;
+                  color:$secundario;
+                  i {
+                     &:hover {
+                        transform: scale(3);
+                        color: #f6ff00;
+                        transition: 0.3s;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .textoCopy {
+         text-align: center;
+         p {
+            @include titulosPrincipales(1rem, $secundario, 300, center);
+         }
+      }
+   }
+}
+

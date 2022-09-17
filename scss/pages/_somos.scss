@@ -1,0 +1,14 @@
+#somos {
+   main {
+      .row {
+         .col-12 {
+            .col-7 {
+               p {
+                  @extend %textoEnPaginas;
+                  font-size: 2rem;
+               }
+            }
+         }
+      }
+   }
+}

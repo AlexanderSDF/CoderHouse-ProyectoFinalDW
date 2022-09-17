@@ -1,0 +1,19 @@
+#galeria {
+   main {
+      .row {
+         div {
+            .row {
+               .col-4 {
+                  @extend %divFlexCol;
+                  .img-fluid {
+                     width: 100%;
+                     &:hover {
+                        @extend %zoomImagen;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

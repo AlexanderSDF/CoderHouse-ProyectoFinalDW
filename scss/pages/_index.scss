@@ -1,0 +1,24 @@
+main {
+  .row {
+    .col-12{
+      .col-12 {
+        h3 {
+          margin-top: 2%;
+        }
+      }
+    }
+    .col-12 {
+      .fila {
+        margin-top: 2%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .column {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
