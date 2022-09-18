@@ -6,28 +6,10 @@
 .container-fluid {
    padding-left: 0;
    padding-right: 0;
-   margin-right: 10%;
 }
 /* ---------------HEADER------------------ */
 .header {
    background-image: map-get($colores, "colorNavFooter");
-   .container-fluid {
-      margin-right: 10%;
-      /* Margin del botón hamburguesa */
-      .navbar-toggler {
-         margin-right: 5%;
-         /* Ancho y alto del botón menu hamburg */
-         .navbar-toggler-icon {
-            width: 2em;
-            height: 2em;
-         }
-      }
-      /* Separación entre los nav links */
-      .nav-item {
-         margin-left: 2%;
-         font-size: $dimNavLink;
-      }
-   }
 }
 main {
    background-color: map-get($colores, "colorAmarillo");
@@ -68,7 +50,8 @@ main {
    .textoFooter {
       display: flex;
       padding: 2rem;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
       .listaFooter {
          ul {
             width: 400px;

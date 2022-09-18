@@ -3,15 +3,17 @@
    display: grid;
    grid-template-columns: 50% 50%;
    grid-template-rows: auto auto;
+   justify-items: center;
+   align-items: start;
    grid-template-areas:
       "cochesHistoricos  grandesVictorias"
       "trofeos trofeos";
-   align-items: center;
-   justify-items: center;
    .cochesHistoricos {
-      width: 95%;
+      width: 100%;
       grid-area: cochesHistoricos;
       display: grid;
+      margin-top: 5%;
+      align-items: start;
       grid-template-columns: 33% 33% 33%;
       grid-template-rows: auto auto auto;
       grid-template-areas:
@@ -20,7 +22,6 @@
          "coche4 coche5 coche6";
       justify-items: center;
       row-gap: 10px;
-      column-gap: 10;
       justify-content: space-between;
       .tituloHistoricos {
          grid-area: tituloHistoricos;
@@ -53,8 +54,8 @@
          @extend %divFlexCol;
          @include titulosPrincipales(1.7rem, $primario, 700, center);
          .img-fluid {
-            width: 100%;
             @extend %imagenesTodas;
+            width: 85%;
             &:hover {
                @extend %zoomImagen;
             }
@@ -62,9 +63,11 @@
       }
    }
    .grandesVictorias {
-      width: 95%;
+      width: 100%;
+      margin-top: 5%;
       grid-area: grandesVictorias;
       display: grid;
+      align-items:start;
       grid-template-columns: 33% 33% 33%;
       grid-template-rows: auto auto;
       grid-template-areas:
@@ -73,7 +76,6 @@
          "victoria4 victoria5 victoria6";
       justify-items: center;
       row-gap: 10px;
-      column-gap: 10;
       justify-content: space-between;
       .tituloVictorias {
          grid-area: tituloVictorias;
@@ -106,8 +108,8 @@
          @extend %divFlexCol;
          @include titulosPrincipales(1.7rem, $primario, 700, center);
          .img-fluid {
-            width: 100%;
             @extend %imagenesTodas;
+            width: 85%;
             &:hover {
                @extend %zoomImagen;
             }
@@ -115,9 +117,10 @@
       }
    }
    .trofeos {
-      width: 49%;
+      width: 50%;
       grid-area: trofeos;
       display: grid;
+      align-items: start;
       grid-template-columns: 33% 33% 33%;
       grid-template-rows: auto auto;
       grid-template-areas:
@@ -126,7 +129,6 @@
          "trofeo4 trofeo5 trofeo6";
       justify-items: center;
       row-gap: 10px;
-      column-gap: 10;
       justify-content: space-between;
       .tituloTrofeos {
          grid-area: tituloTrofeos;
@@ -159,8 +161,8 @@
          @extend %divFlexCol;
          @include titulosPrincipales(1.7rem, $primario, 700, center);
          .img-fluid {
-            width: 100%;
             @extend %imagenesTodas;
+            width: 85%;
             &:hover {
                @extend %zoomImagen;
             }

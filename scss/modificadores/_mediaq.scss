@@ -1,78 +1,114 @@
-/* MQ para tratar las dimensiones de las img en casos específicos */
-@media screen and (max-width: 1440px) {
-   .img-fluid {
-      width: 100%;
-   }
-}
-@media screen and (max-width: 1024px) {
-   .img-fluid {
-      width: 100%;
-   }
-}
 @media screen and (max-width: 990px) {
-   .img-fluid {
-      width: 90%;
+   .contenidoGaleria {
+      .cochesHistoricos {
+         width: 100%;
+         grid-area: cochesHistoricos;
+         display: grid;
+         grid-template-columns: 50% 50%;
+         grid-template-rows: auto auto auto auto;
+         grid-template-areas:
+            "tituloHistoricos tituloHistoricos"
+            "coche1 coche2"
+            "coche3 coche4"
+            "coche5 coche6";
+      }
+      .grandesVictorias {
+         width: 100%;
+         grid-area: grandesVictorias;
+         display: grid;
+         grid-template-columns: 50% 50%;
+         grid-template-rows: auto auto auto auto;
+         grid-template-areas:
+            "tituloVictorias tituloVictorias"
+            "victoria1 victoria2"
+            "victoria3 victoria4"
+            "victoria5 victoria6";
+      }
+      .trofeos {
+         width: 70%;
+         grid-area: trofeos;
+         display: grid;
+         grid-template-columns: 33% 33% 33%;
+         grid-template-rows: auto auto;
+         grid-template-areas:
+            "tituloTrofeos tituloTrofeos tituloTrofeos"
+            "trofeo1 trofeo2 trofeo3"
+            "trofeo4 trofeo5 trofeo6";
+      }
    }
    .footer .textoFooter {
       flex-direction: column;
       align-items: center;
       padding: 1.5rem;
    }
-   .cochesHistoricos {
-      width: 100%;
-      grid-area: cochesHistoricos;
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: auto auto auto auto;
-      grid-template-areas:
-         "tituloHistoricos tituloHistoricos"
-         "coche1 coche2"
-         "coche3 coche4"
-         "coche5 coche6";
-   }
-   .grandesVictorias {
-      width: 100%;
-      grid-area: grandesVictorias;
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: auto auto auto auto;
-      grid-template-areas:
-         "tituloVictorias tituloVictorias"
-         "victoria1 victoria2"
-         "victoria3 victoria4"
-         "victoria5 victoria6";
-   }
-   .trofeos {
-      width: 70%;
-      grid-area: trofeos;
-      display: grid;
-      grid-template-columns: 33% 33% 33%;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-         "tituloTrofeos tituloTrofeos tituloTrofeos"
-         "trofeo1 trofeo2 trofeo3"
-         "trofeo4 trofeo5 trofeo6";
-   }
 }
+
 @media screen and (max-width: 768px) {
+   main {
+      h1 {
+         font-size: 3rem;
+      }
+   }
    .contenidoGaleria {
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: auto auto auto;
       grid-template-areas:
-      "cochesHistoricos"
-      "grandesVictorias"
-      "trofeos";
+         "cochesHistoricos"
+         "grandesVictorias"
+         "trofeos";
+      .trofeos {
+         width: 100%;
+         margin-top: 5%;
+         grid-area: trofeos;
+         display: grid;
+         grid-template-columns: 50% 50%;
+         grid-template-rows: auto auto auto auto;
+         grid-template-areas:
+            "tituloTrofeos tituloTrofeos"
+            "trofeo1 trofeo2" 
+            "trofeo3 trofeo4" 
+            "trofeo5 trofeo6";
+      }
    }
-   .trofeos {
-      width: 95%;
-      grid-area: trofeos;
-      display: grid;
-      grid-template-columns: 33% 33% 33%;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-         "tituloTrofeos tituloTrofeos tituloTrofeos"
-         "trofeo1 trofeo2 trofeo3"
-         "trofeo4 trofeo5 trofeo6";
+   .footer .textoFooter .listaFooter ul {
+      width: 270px;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+   }
+   #somos {
+      p {
+         font-size: 1.2rem;
+      }
+   }
+}
+/* MOOBILE L */
+@media screen and (max-width: 425px) {
+   #index, 
+   #historia, 
+   #pilotos, 
+   #galeria,
+   #somos{
+      main {
+         h1 {
+            @include titulosPrincipales(2rem, $primario, 700, center);
+         }
+         h2 {
+            @include titulosPrincipales(1.7rem, $primario, 700, center);
+         }
+         h3 {
+            @include titulosPrincipales(1.2rem, $primario, 700, center);
+         }
+         h4 {
+            @include titulosPrincipales(0.7rem, $primario, 700, center);
+         }
+         p {
+            font-size: 1rem;
+         }
+      }
+   }
+   .footer .textoFooter .textoCopy p {
+      font-size: 80%;
    }
 }
