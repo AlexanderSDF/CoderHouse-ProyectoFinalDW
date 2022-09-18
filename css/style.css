@@ -6,7 +6,22 @@
 /* -----------------MIXIN----------------  */
 /* EXTEND */
 main .row .col-12,
-main .row .col-6, #galeria main .row div .row .col-4 {
+main .row .col-6, .contenidoGaleria .cochesHistoricos .coche1,
+.contenidoGaleria .cochesHistoricos .coche2,
+.contenidoGaleria .cochesHistoricos .coche3,
+.contenidoGaleria .cochesHistoricos .coche4,
+.contenidoGaleria .cochesHistoricos .coche5,
+.contenidoGaleria .cochesHistoricos .coche6, .contenidoGaleria .grandesVictorias .victoria1,
+.contenidoGaleria .grandesVictorias .victoria2,
+.contenidoGaleria .grandesVictorias .victoria3,
+.contenidoGaleria .grandesVictorias .victoria4,
+.contenidoGaleria .grandesVictorias .victoria5,
+.contenidoGaleria .grandesVictorias .victoria6, .contenidoGaleria .trofeos .trofeo1,
+.contenidoGaleria .trofeos .trofeo2,
+.contenidoGaleria .trofeos .trofeo3,
+.contenidoGaleria .trofeos .trofeo4,
+.contenidoGaleria .trofeos .trofeo5,
+.contenidoGaleria .trofeos .trofeo6 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,33 +36,45 @@ main .row .col-6 p, #somos main .row .col-12 .col-7 p {
   text-align: justify; }
 
 main .row .col-12 .img-fluid,
-main .row .col-6 .img-fluid {
+main .row .col-6 .img-fluid, .contenidoGaleria .cochesHistoricos .coche1 .img-fluid,
+.contenidoGaleria .cochesHistoricos .coche2 .img-fluid,
+.contenidoGaleria .cochesHistoricos .coche3 .img-fluid,
+.contenidoGaleria .cochesHistoricos .coche4 .img-fluid,
+.contenidoGaleria .cochesHistoricos .coche5 .img-fluid,
+.contenidoGaleria .cochesHistoricos .coche6 .img-fluid, .contenidoGaleria .grandesVictorias .victoria1 .img-fluid,
+.contenidoGaleria .grandesVictorias .victoria2 .img-fluid,
+.contenidoGaleria .grandesVictorias .victoria3 .img-fluid,
+.contenidoGaleria .grandesVictorias .victoria4 .img-fluid,
+.contenidoGaleria .grandesVictorias .victoria5 .img-fluid,
+.contenidoGaleria .grandesVictorias .victoria6 .img-fluid, .contenidoGaleria .trofeos .trofeo1 .img-fluid,
+.contenidoGaleria .trofeos .trofeo2 .img-fluid,
+.contenidoGaleria .trofeos .trofeo3 .img-fluid,
+.contenidoGaleria .trofeos .trofeo4 .img-fluid,
+.contenidoGaleria .trofeos .trofeo5 .img-fluid,
+.contenidoGaleria .trofeos .trofeo6 .img-fluid {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   width: 80%;
   margin-top: 5px;
   border-radius: 5%; }
 
-#galeria main .row div .row .col-4 .img-fluid:hover {
+.contenidoGaleria .cochesHistoricos .coche1 .img-fluid:hover,
+.contenidoGaleria .cochesHistoricos .coche2 .img-fluid:hover,
+.contenidoGaleria .cochesHistoricos .coche3 .img-fluid:hover,
+.contenidoGaleria .cochesHistoricos .coche4 .img-fluid:hover,
+.contenidoGaleria .cochesHistoricos .coche5 .img-fluid:hover,
+.contenidoGaleria .cochesHistoricos .coche6 .img-fluid:hover, .contenidoGaleria .grandesVictorias .victoria1 .img-fluid:hover,
+.contenidoGaleria .grandesVictorias .victoria2 .img-fluid:hover,
+.contenidoGaleria .grandesVictorias .victoria3 .img-fluid:hover,
+.contenidoGaleria .grandesVictorias .victoria4 .img-fluid:hover,
+.contenidoGaleria .grandesVictorias .victoria5 .img-fluid:hover,
+.contenidoGaleria .grandesVictorias .victoria6 .img-fluid:hover, .contenidoGaleria .trofeos .trofeo1 .img-fluid:hover,
+.contenidoGaleria .trofeos .trofeo2 .img-fluid:hover,
+.contenidoGaleria .trofeos .trofeo3 .img-fluid:hover,
+.contenidoGaleria .trofeos .trofeo4 .img-fluid:hover,
+.contenidoGaleria .trofeos .trofeo5 .img-fluid:hover,
+.contenidoGaleria .trofeos .trofeo6 .img-fluid:hover {
   transform: scale(1.5);
   transition: .6s; }
-
-/* MEDIA QUERIES */
-/* MQ para tratar las dimensiones de las img en casos específicos */
-@media screen and (max-width: 1440px) {
-  .img-fluid {
-    width: 100%; } }
-
-@media screen and (max-width: 1024px) {
-  .img-fluid {
-    width: 100%; } }
-
-@media screen and (max-width: 990px) {
-  .img-fluid {
-    width: 90%; }
-  .footer .textoFooter {
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem; } }
 
 /* PARTIALS GENERALIDADES */
 * {
@@ -150,8 +177,205 @@ main .row .col-12 .fila {
     display: flex;
     flex-direction: column; }
 
-#galeria main .row div .row .col-4 .img-fluid {
-  width: 100%; }
+/* ------------------------- GALERIA------------------------------- */
+.contenidoGaleria {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "cochesHistoricos  grandesVictorias" "trofeos trofeos";
+  align-items: center;
+  justify-items: center; }
+  .contenidoGaleria .cochesHistoricos {
+    width: 95%;
+    grid-area: cochesHistoricos;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "tituloHistoricos tituloHistoricos tituloHistoricos" "coche1 coche2 coche3" "coche4 coche5 coche6";
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 10;
+    justify-content: space-between; }
+    .contenidoGaleria .cochesHistoricos .tituloHistoricos {
+      grid-area: tituloHistoricos;
+      font-size: 2.3rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+    .contenidoGaleria .cochesHistoricos .coche1 {
+      grid-area: coche1; }
+    .contenidoGaleria .cochesHistoricos .coche2 {
+      grid-area: coche2; }
+    .contenidoGaleria .cochesHistoricos .coche3 {
+      grid-area: coche3; }
+    .contenidoGaleria .cochesHistoricos .coche4 {
+      grid-area: coche4; }
+    .contenidoGaleria .cochesHistoricos .coche5 {
+      grid-area: coche5; }
+    .contenidoGaleria .cochesHistoricos .coche6 {
+      grid-area: coche6; }
+    .contenidoGaleria .cochesHistoricos .coche1,
+    .contenidoGaleria .cochesHistoricos .coche2,
+    .contenidoGaleria .cochesHistoricos .coche3,
+    .contenidoGaleria .cochesHistoricos .coche4,
+    .contenidoGaleria .cochesHistoricos .coche5,
+    .contenidoGaleria .cochesHistoricos .coche6 {
+      font-size: 1.7rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+      .contenidoGaleria .cochesHistoricos .coche1 .img-fluid,
+      .contenidoGaleria .cochesHistoricos .coche2 .img-fluid,
+      .contenidoGaleria .cochesHistoricos .coche3 .img-fluid,
+      .contenidoGaleria .cochesHistoricos .coche4 .img-fluid,
+      .contenidoGaleria .cochesHistoricos .coche5 .img-fluid,
+      .contenidoGaleria .cochesHistoricos .coche6 .img-fluid {
+        width: 100%; }
+  .contenidoGaleria .grandesVictorias {
+    width: 95%;
+    grid-area: grandesVictorias;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "tituloVictorias tituloVictorias tituloVictorias" "victoria1 victoria2 victoria3" "victoria4 victoria5 victoria6";
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 10;
+    justify-content: space-between; }
+    .contenidoGaleria .grandesVictorias .tituloVictorias {
+      grid-area: tituloVictorias;
+      font-size: 2.3rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+    .contenidoGaleria .grandesVictorias .victoria1 {
+      grid-area: victoria1; }
+    .contenidoGaleria .grandesVictorias .victoria2 {
+      grid-area: victoria2; }
+    .contenidoGaleria .grandesVictorias .victoria3 {
+      grid-area: victoria3; }
+    .contenidoGaleria .grandesVictorias .victoria4 {
+      grid-area: victoria4; }
+    .contenidoGaleria .grandesVictorias .victoria5 {
+      grid-area: victoria5; }
+    .contenidoGaleria .grandesVictorias .victoria6 {
+      grid-area: victoria6; }
+    .contenidoGaleria .grandesVictorias .victoria1,
+    .contenidoGaleria .grandesVictorias .victoria2,
+    .contenidoGaleria .grandesVictorias .victoria3,
+    .contenidoGaleria .grandesVictorias .victoria4,
+    .contenidoGaleria .grandesVictorias .victoria5,
+    .contenidoGaleria .grandesVictorias .victoria6 {
+      font-size: 1.7rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+      .contenidoGaleria .grandesVictorias .victoria1 .img-fluid,
+      .contenidoGaleria .grandesVictorias .victoria2 .img-fluid,
+      .contenidoGaleria .grandesVictorias .victoria3 .img-fluid,
+      .contenidoGaleria .grandesVictorias .victoria4 .img-fluid,
+      .contenidoGaleria .grandesVictorias .victoria5 .img-fluid,
+      .contenidoGaleria .grandesVictorias .victoria6 .img-fluid {
+        width: 100%; }
+  .contenidoGaleria .trofeos {
+    width: 49%;
+    grid-area: trofeos;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "tituloTrofeos tituloTrofeos tituloTrofeos" "trofeo1 trofeo2 trofeo3" "trofeo4 trofeo5 trofeo6";
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 10;
+    justify-content: space-between; }
+    .contenidoGaleria .trofeos .tituloTrofeos {
+      grid-area: tituloTrofeos;
+      font-size: 2.3rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+    .contenidoGaleria .trofeos .trofeo1 {
+      grid-area: trofeo1; }
+    .contenidoGaleria .trofeos .trofeo2 {
+      grid-area: trofeo2; }
+    .contenidoGaleria .trofeos .trofeo3 {
+      grid-area: trofeo3; }
+    .contenidoGaleria .trofeos .trofeo4 {
+      grid-area: trofeo4; }
+    .contenidoGaleria .trofeos .trofeo5 {
+      grid-area: trofeo5; }
+    .contenidoGaleria .trofeos .trofeo6 {
+      grid-area: trofeo6; }
+    .contenidoGaleria .trofeos .trofeo1,
+    .contenidoGaleria .trofeos .trofeo2,
+    .contenidoGaleria .trofeos .trofeo3,
+    .contenidoGaleria .trofeos .trofeo4,
+    .contenidoGaleria .trofeos .trofeo5,
+    .contenidoGaleria .trofeos .trofeo6 {
+      font-size: 1.7rem;
+      color: #050505;
+      font-weight: 700;
+      text-align: center; }
+      .contenidoGaleria .trofeos .trofeo1 .img-fluid,
+      .contenidoGaleria .trofeos .trofeo2 .img-fluid,
+      .contenidoGaleria .trofeos .trofeo3 .img-fluid,
+      .contenidoGaleria .trofeos .trofeo4 .img-fluid,
+      .contenidoGaleria .trofeos .trofeo5 .img-fluid,
+      .contenidoGaleria .trofeos .trofeo6 .img-fluid {
+        width: 100%; }
 
 #somos main .row .col-12 .col-7 p {
   font-size: 2rem; }
+
+/* MEDIA QUERIES */
+/* MQ para tratar las dimensiones de las img en casos específicos */
+@media screen and (max-width: 1440px) {
+  .img-fluid {
+    width: 100%; } }
+
+@media screen and (max-width: 1024px) {
+  .img-fluid {
+    width: 100%; } }
+
+@media screen and (max-width: 990px) {
+  .img-fluid {
+    width: 90%; }
+  .footer .textoFooter {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem; }
+  .cochesHistoricos {
+    width: 100%;
+    grid-area: cochesHistoricos;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "tituloHistoricos tituloHistoricos" "coche1 coche2" "coche3 coche4" "coche5 coche6"; }
+  .grandesVictorias {
+    width: 100%;
+    grid-area: grandesVictorias;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "tituloVictorias tituloVictorias" "victoria1 victoria2" "victoria3 victoria4" "victoria5 victoria6"; }
+  .trofeos {
+    width: 70%;
+    grid-area: trofeos;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "tituloTrofeos tituloTrofeos tituloTrofeos" "trofeo1 trofeo2 trofeo3" "trofeo4 trofeo5 trofeo6"; } }
+
+@media screen and (max-width: 768px) {
+  .contenidoGaleria {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "cochesHistoricos" "grandesVictorias" "trofeos"; }
+  .trofeos {
+    width: 95%;
+    grid-area: trofeos;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "tituloTrofeos tituloTrofeos tituloTrofeos" "trofeo1 trofeo2 trofeo3" "trofeo4 trofeo5 trofeo6"; } }

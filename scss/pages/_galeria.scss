@@ -1,17 +1,168 @@
-#galeria {
-   main {
-      .row {
-         div {
-            .row {
-               .col-4 {
-                  @extend %divFlexCol;
-                  .img-fluid {
-                     width: 100%;
-                     &:hover {
-                        @extend %zoomImagen;
-                     }
-                  }
-               }
+/* ------------------------- GALERIA------------------------------- */
+.contenidoGaleria {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: auto auto;
+   grid-template-areas:
+      "cochesHistoricos  grandesVictorias"
+      "trofeos trofeos";
+   align-items: center;
+   justify-items: center;
+   .cochesHistoricos {
+      width: 95%;
+      grid-area: cochesHistoricos;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+         "tituloHistoricos tituloHistoricos tituloHistoricos"
+         "coche1 coche2 coche3"
+         "coche4 coche5 coche6";
+      justify-items: center;
+      row-gap: 10px;
+      column-gap: 10;
+      justify-content: space-between;
+      .tituloHistoricos {
+         grid-area: tituloHistoricos;
+         @include titulosPrincipales(2.3rem, $primario, 700, center);
+      }
+      .coche1 {
+         grid-area: coche1;
+      }
+      .coche2 {
+         grid-area: coche2;
+      }
+      .coche3 {
+         grid-area: coche3;
+      }
+      .coche4 {
+         grid-area: coche4;
+      }
+      .coche5 {
+         grid-area: coche5;
+      }
+      .coche6 {
+         grid-area: coche6;
+      }
+      .coche1,
+      .coche2,
+      .coche3,
+      .coche4,
+      .coche5,
+      .coche6 {
+         @extend %divFlexCol;
+         @include titulosPrincipales(1.7rem, $primario, 700, center);
+         .img-fluid {
+            width: 100%;
+            @extend %imagenesTodas;
+            &:hover {
+               @extend %zoomImagen;
+            }
+         }
+      }
+   }
+   .grandesVictorias {
+      width: 95%;
+      grid-area: grandesVictorias;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+         "tituloVictorias tituloVictorias tituloVictorias"
+         "victoria1 victoria2 victoria3"
+         "victoria4 victoria5 victoria6";
+      justify-items: center;
+      row-gap: 10px;
+      column-gap: 10;
+      justify-content: space-between;
+      .tituloVictorias {
+         grid-area: tituloVictorias;
+         @include titulosPrincipales(2.3rem, $primario, 700, center);
+      }
+      .victoria1 {
+         grid-area: victoria1;
+      }
+      .victoria2 {
+         grid-area: victoria2;
+      }
+      .victoria3 {
+         grid-area: victoria3;
+      }
+      .victoria4 {
+         grid-area: victoria4;
+      }
+      .victoria5 {
+         grid-area: victoria5;
+      }
+      .victoria6 {
+         grid-area: victoria6;
+      }
+      .victoria1,
+      .victoria2,
+      .victoria3,
+      .victoria4,
+      .victoria5,
+      .victoria6 {
+         @extend %divFlexCol;
+         @include titulosPrincipales(1.7rem, $primario, 700, center);
+         .img-fluid {
+            width: 100%;
+            @extend %imagenesTodas;
+            &:hover {
+               @extend %zoomImagen;
+            }
+         }
+      }
+   }
+   .trofeos {
+      width: 49%;
+      grid-area: trofeos;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+         "tituloTrofeos tituloTrofeos tituloTrofeos"
+         "trofeo1 trofeo2 trofeo3"
+         "trofeo4 trofeo5 trofeo6";
+      justify-items: center;
+      row-gap: 10px;
+      column-gap: 10;
+      justify-content: space-between;
+      .tituloTrofeos {
+         grid-area: tituloTrofeos;
+         @include titulosPrincipales(2.3rem, $primario, 700, center);
+      }
+      .trofeo1 {
+         grid-area: trofeo1;
+      }
+      .trofeo2 {
+         grid-area: trofeo2;
+      }
+      .trofeo3 {
+         grid-area: trofeo3;
+      }
+      .trofeo4 {
+         grid-area: trofeo4;
+      }
+      .trofeo5 {
+         grid-area: trofeo5;
+      }
+      .trofeo6 {
+         grid-area: trofeo6;
+      }
+      .trofeo1,
+      .trofeo2,
+      .trofeo3,
+      .trofeo4,
+      .trofeo5,
+      .trofeo6 {
+         @extend %divFlexCol;
+         @include titulosPrincipales(1.7rem, $primario, 700, center);
+         .img-fluid {
+            width: 100%;
+            @extend %imagenesTodas;
+            &:hover {
+               @extend %zoomImagen;
             }
          }
       }
