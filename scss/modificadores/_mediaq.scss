@@ -36,10 +36,15 @@
             "trofeo4 trofeo5 trofeo6";
       }
    }
-   .footer .textoFooter {
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
+   .footer {
+      .textoFooter {
+         flex-direction: column;
+         align-items: center;
+         padding: 1.5rem;
+         .listaFooter{
+            margin-bottom: 2%;
+         }
+      }
    }
 }
 
@@ -71,11 +76,17 @@
             "trofeo5 trofeo6";
       }
    }
-   .footer .textoFooter .listaFooter ul {
-      width: 270px;
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
+   .footer {
+      .textoFooter {
+         .listaFooter {
+            ul {
+               width: 270px;
+               display: flex;
+               justify-content: space-between;
+               list-style: none;
+            }
+         }
+      }
    }
    #somos {
       p {
@@ -108,7 +119,16 @@
          }
       }
    }
-   .footer .textoFooter .textoCopy p {
-      font-size: 80%;
+   .footer {
+      .textoFooter {
+         .textoCopy {
+            display: flex;
+            flex-direction: column;
+            p {
+               font-size: 1rem;
+               margin: 0;
+            }
+         }
+      }
    }
 }

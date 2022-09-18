@@ -74,9 +74,12 @@ main {
          }
       }
       .textoCopy {
+         display: flex;
+         flex-direction: row;
          text-align: center;
          p {
-            @include titulosPrincipales(1rem, $secundario, 300, center);
+            @include titulosPrincipales(1.2rem, $secundario, 300, center);
+            margin-right: 15px;
          }
       }
    }
