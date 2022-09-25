@@ -1,3 +1,13 @@
+@media screen and (min-width: 990px) {
+   .contenidoGaleria {
+      .cochesHistoricos {
+         padding-right: 3%;
+      }
+      .grandesVictorias {
+         padding-left: 3%;
+      }
+   }
+}
 @media screen and (max-width: 990px) {
    .contenidoGaleria {
       .cochesHistoricos {

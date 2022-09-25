@@ -1,17 +1,12 @@
-DESAFÍO SASS II Y SEO
 
-Map-Mixin-Extend
-Aplique map mixin y extend, se encuentran en el archivo _variables.scss de la carpeta modificadores.
-Para sass adopte el formato 1 directorio style.scss y en 2 carpetas una con modificadores(@medias y variables como colores, dimensiones)
-Y la carpeta pages contiene las los archivos scss individuales de cada pagina y el _general que modifica generalidades como header,footer.
 
-SEO
-Para el SEO aplique en cada Head las etiquetas meta, con sus respectivas keywords y las descriptions de cada pagina referido a su tema.
 
-Titulos: indique un titulo referido a los temas de cada pagina.
-Para el index essereFerrari(slogan ser Ferrari)
-Para pagina Historia, pilotos, galería y somos refiere a el contenido individual de la pagina.
+siones)
+r,footer.
 
-Encabezados: los utilice acorde a su semántica.
-ejemplo: para la pagina pilotos utilice un h1 con el contenido pilotos
-para luego utilizar h2 para encabezados como pilotos actuales y pilotos históricos y h3 para indicar los nombres de esos pilotos.
+ tema.
+
+
+
+
+
