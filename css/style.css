@@ -136,20 +136,24 @@ main {
       .footer .textoFooter .listaFooter ul li a {
         text-decoration: none;
         color: #e1e1e1; }
-        .footer .textoFooter .listaFooter ul li a i:hover {
-          transform: scale(3);
-          color: #f6ff00;
-          transition: 0.3s; }
+        .footer .textoFooter .listaFooter ul li a .fa-brands, .footer .textoFooter .listaFooter ul li a .fab {
+          font-weight: 400;
+          font-size: 25px; }
+          .footer .textoFooter .listaFooter ul li a .fa-brands:hover, .footer .textoFooter .listaFooter ul li a .fab:hover {
+            transform: scale(3);
+            color: #f6ff00;
+            transition: 0.3s; }
     .footer .textoFooter .textoCopy {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       text-align: center; }
       .footer .textoFooter .textoCopy p {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         color: #e1e1e1;
         font-weight: 300;
         text-align: center;
-        margin-right: 15px; }
+        margin-right: 0px;
+        margin-bottom: 0; }
 
 /* PARTIALS PAGINAS INDIVIDUALIDADES*/
 main .row .col-12 .col-12 h3 {
@@ -375,7 +379,7 @@ main .row .col-12 .fila {
     font-size: 1.2rem; } }
 
 /* MOOBILE L */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   #index main h1,
   #historia main h1,
   #pilotos main h1,

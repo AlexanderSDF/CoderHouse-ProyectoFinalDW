@@ -62,7 +62,9 @@ main {
                a {
                   text-decoration: none;
                   color:$secundario;
-                  i {
+                  .fa-brands, .fab {
+                     font-weight: 400;
+                     font-size: 25px;
                      &:hover {
                         transform: scale(3);
                         color: #f6ff00;
@@ -73,13 +75,15 @@ main {
             }
          }
       }
+      
       .textoCopy {
          display: flex;
-         flex-direction: row;
+         flex-direction: column;
          text-align: center;
          p {
-            @include titulosPrincipales(1.2rem, $secundario, 300, center);
-            margin-right: 15px;
+            @include titulosPrincipales(1.7rem, $secundario, 300, center);
+            margin-right: 0px;
+            margin-bottom: 0;
          }
       }
    }
